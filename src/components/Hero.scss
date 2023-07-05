@@ -1,0 +1,68 @@
+@import "../sass/mixins.scss";
+@import "../sass/variables.scss";
+
+.hero-container {
+  background-color: $--color-bg-dark;
+  position: relative;
+  background-image: radial-gradient(#4532cc 10%, #0a003c 70%);
+  &__bg {
+    position: absolute;
+    height: 46.5%;
+    bottom: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.hero {
+  @include container;
+  padding-top: 3.5rem;
+  display: flex;
+  gap: 3rem;
+  &__left {
+    padding-top: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 46rem;
+    gap: 1.7rem;
+    &--btns {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      & .btn-try {
+        @include button;
+      }
+      & .btn-learn {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.875rem;
+      }
+    }
+    &--heading {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 54px;
+      letter-spacing: -0.025em;
+    }
+    &--desc {
+      font-size: 1.125rem;
+      line-height: 2rem;
+      color: rgb(229, 231, 235);
+    }
+  }
+  &__right {
+    img {
+      width: 22.5rem;
+      z-index: -10;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+  align-items: center;
+  }
+}

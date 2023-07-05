@@ -1,0 +1,44 @@
+@import "../sass/mixins.scss";
+@import "../sass/variables.scss";
+
+.our-mission-container {
+  margin: 6rem 0;
+}
+
+.our-mission {
+  @include container;
+  @include feature-font;
+  text-align: center;
+  p {
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    max-width: 48rem;
+    margin-bottom: 2rem;
+  }
+  h2 {
+    margin: 0 auto;
+    font-size: 1.875rem;
+    max-width: 32rem;
+    margin-bottom: 1rem;
+  }
+
+  &__flex {
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 4rem;
+    width: 100%;
+  }
+  &__reviews {
+    justify-content: center;
+    display: flex;
+  }
+  .phone-img {
+    height: 40rem;
+    border-radius: 2.5rem;
+    border: 14px solid rgb(31, 41, 55);
+  }
+}

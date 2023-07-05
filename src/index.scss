@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap");
+@import "./sass/mixins.scss";
+@import "./sass/variables.scss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  background-color: $--color-bg-light;
+  width: 100vw !important;
+  overflow-x: hidden;
+}

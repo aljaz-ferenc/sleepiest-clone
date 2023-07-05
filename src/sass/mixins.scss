@@ -1,0 +1,75 @@
+@mixin container {
+  padding: 0 1.5rem;
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 100%;
+}
+
+@mixin button {
+  color: #000;
+  background-color: #fff;
+  cursor: pointer;
+  padding: 12px 24px;
+  font-weight: 700;
+  font-size: 1.125rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 0.2s;
+  &:hover {
+    scale: 1.05;
+  }
+}
+
+@mixin feature-font {
+  h2 {
+    font-weight: 700;
+    font-size: 2.25rem;
+    span {
+      color: $--color-accent;
+    }
+  }
+  p {
+    color: $--color-text-gray;
+    font-size: 1.125rem;
+    line-height: 1.4;
+  }
+  a {
+    @include button;
+    align-self: self-end;
+  }
+}
+
+@mixin feature-images($phone-rotation) {
+  .phone-img {
+    display: block;
+    height: 160%;
+    max-height: 35rem;
+    border-radius: 1rem;
+    outline: 4px solid#240e64;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate($phone-rotation);
+  }
+  .person1-img {
+    // position: absolute;
+    height: 8rem;
+    border-radius: 50%;
+    outline: 3px solid $--color-accent;
+    transform: translate(-8rem, -8rem);
+  }
+  .person2-img {
+    height: 6rem;
+    border-radius: 50%;
+    outline: 3px solid $--color-accent;
+    z-index: 10;
+    transform: translate(10rem, 0);
+  }
+}
+
+@mixin feature-article {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: fit-content;
+  gap: 3rem;
+}

@@ -1,0 +1,29 @@
+@import "../sass/mixins.scss";
+@import "../sass/variables.scss";
+
+.feature-container2 {
+  background-color: $--color-bg-dark;
+  padding: 9rem 0;
+  text-align: right;
+  article {
+    @include feature-article;
+    @include container;
+    div:nth-child(2){
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        max-width: 35rem;
+        justify-self: center;
+        align-self: center;
+        justify-self: center;
+        align-self: center;
+    }
+    div:nth-child(1){
+        position: relative;
+        display: grid;
+        place-content: center;
+    }
+    @include feature-font;
+    @include feature-images(-4deg);
+  }
+}

@@ -1,0 +1,30 @@
+@import "../sass/mixins.scss";
+@import "../sass/variables.scss";
+
+.feature-container3 {
+  padding: 9rem 0;
+  article {
+    @include feature-article;
+    @include container;
+    @include feature-font;
+    @include feature-images(4deg);
+    div:nth-child(1){
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        max-width: 35rem;
+        justify-self: center;
+        align-self: center;
+        justify-self: center;
+        align-self: center;
+    }
+    div:nth-child(2){
+        display: grid;
+        place-content: center;
+        position: relative;
+    }
+    .phone-img{
+        outline: 4px solid  $--color-bg-dark;
+    }
+  }
+}

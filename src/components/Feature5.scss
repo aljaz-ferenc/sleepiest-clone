@@ -1,0 +1,46 @@
+@import "../sass/mixins.scss";
+@import "../sass/variables.scss";
+
+.feature-container5{
+    padding: 9rem 0;
+    @include feature-font;
+    a{
+        justify-self: self-end;
+    }
+    article {
+        @include feature-article;
+        @include container;
+        div:nth-child(1){
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            max-width: 35rem;
+            justify-self: center;
+            align-self: center;
+            justify-self: center;
+            align-self: center;
+        }
+        div:nth-child(2){
+            display: grid;
+            place-content: center;
+            position: relative;
+        }
+        img{
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) ;
+            position: absolute;
+            display: block;
+            height: 100%;
+            border-radius: 1rem;
+            outline: 4px solid  $--color-bg-dark;
+        }
+        .phone1{
+            rotate: 4deg;
+        }
+        .phone2{
+            scale: .8;
+            rotate: -5deg;
+        }
+    }
+}

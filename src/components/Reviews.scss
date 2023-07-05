@@ -1,0 +1,35 @@
+@import "../sass/mixins.scss";
+@import "../sass/variables.scss";
+
+.reviews {
+  &__heading {
+    text-align: center;
+    font-weight: 800;
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+    span {
+      color: $--color-accent;
+    }
+  }
+  &__description {
+    text-align: center;
+    margin-bottom: 4rem;
+    font-weight: 300;
+    color: $--color-text-gray;
+    font-size: 1.25rem;
+  }
+  @include container;
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .reviews {
+    &__cards {
+      grid-template-columns: 1fr;
+    }
+  }
+}

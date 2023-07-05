@@ -1,0 +1,41 @@
+@import "../sass/mixins.scss";
+@import "../sass/variables.scss";
+
+.popular-podcasts {
+  text-align: center;
+  margin-top: 6rem !important;
+  @include container;
+  &__heading {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 54px;
+    margin-bottom: 1rem;
+  }
+  &__text {
+    color: $--color-text-gray;
+    font-size: 20px;
+  }
+  &__cards {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    justify-content: center;
+    justify-items: center;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .popular-podcasts {
+    &__cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+@media (max-width: 768px) {
+  .popular-podcasts {
+    &__cards {
+      grid-template-columns: 1fr;
+    }
+  }
+}

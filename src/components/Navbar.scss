@@ -1,0 +1,81 @@
+@import "../sass/mixins.scss";
+@import "../sass/variables.scss";
+
+header {
+  height: 76px;
+  background-color: $--color-bg-dark;
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  @include container;
+  height: 44px;
+  ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    color: white;
+    height: 100%;
+  }
+  &__left {
+    gap: 0.75rem;
+    &--logo {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      img {
+        border-radius: 50%;
+        height: 36px;
+      }
+    }
+    &--logo-text {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding-top: 8px;
+      img {
+        height: 24px;
+      }
+    }
+  }
+  &__center {
+    font-weight: 600;
+    gap: 2rem;
+    li {
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover {
+        color: #fff !important;
+      }
+    }
+    li:not(:first-child) {
+      color: $--color-text-gray;
+    }
+  }
+  &__right {
+    gap: 2rem;
+    li {
+      cursor: pointer;
+    }
+    &--try {
+      border: 2px solid #fff;
+      border-radius: 100px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      font-weight: 600;
+      transition: all 0.2s;
+      &:hover {
+        background-color: #fff;
+        color: #0a003c;
+      }
+    }
+  }
+}

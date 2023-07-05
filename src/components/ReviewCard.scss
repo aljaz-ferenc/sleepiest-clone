@@ -1,0 +1,32 @@
+@import "../sass/mixins.scss";
+@import "../sass/variables.scss";
+
+.review-card {
+  background-color: $--color-bg-dark;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+  &__title {
+    font-weight: 600;
+    font-size: 1.125rem;
+  }
+  &__review {
+    font-style: italic;
+    color: $--color-text-gray;
+    font-size: 0.875rem;
+  }
+  &__foot {
+    color: $--color-text-gray;
+    font-weight: 300;
+    font-size: 0.75rem;
+  }
+  &__stars {
+    display: flex;
+    img {
+      height: 2rem;
+    }
+  }
+}
