@@ -1,5 +1,5 @@
 import './Feature3.scss'
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import phoneImg from "../assets/features/3/phone.webp";
 import person1 from "../assets/features/3/woman1.webp";
 import person2 from "../assets/features/3/woman2.webp";
@@ -9,7 +9,6 @@ export default function Feature3() {
   const img1Ref = useRef();
   const img1InView = useInView(img1Ref);
   const img2Ref = useRef();
-  const img2InView = useInView(img2Ref);
 
   const { scrollYProgress } = useScroll();
   const y2 = useTransform(scrollYProgress, [0, 1], ["200%", "-100%"]);
@@ -26,13 +25,9 @@ export default function Feature3() {
   const img2Variants = {
     initial: {
       opacity: 0,
-      // x: -100,
-      // y: 100
     },
     animate: {
       opacity: 1,
-      // x: 0,
-      // y: 0
     },
   };
 

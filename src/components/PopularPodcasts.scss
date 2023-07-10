@@ -4,6 +4,7 @@
 .popular-podcasts {
   text-align: center;
   margin-top: 6rem !important;
+  margin-bottom: 6rem !important;
   @include container;
   &__heading {
     font-size: 2rem;
@@ -29,6 +30,7 @@
   .popular-podcasts {
     &__cards {
       grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
     }
   }
 }

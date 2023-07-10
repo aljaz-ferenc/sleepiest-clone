@@ -8,22 +8,43 @@
   article {
     @include feature-article;
     @include container;
-    div:nth-child(2){
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        max-width: 35rem;
-        justify-self: center;
-        align-self: center;
-        justify-self: center;
-        align-self: center;
+    div:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      max-width: 35rem;
+      justify-self: center;
+      align-self: center;
+      justify-self: center;
+      align-self: center;
     }
-    div:nth-child(1){
-        position: relative;
-        display: grid;
-        place-content: center;
+    div:nth-child(1) {
+      position: relative;
+      display: grid;
+      place-content: center;
     }
     @include feature-font;
     @include feature-images(-4deg);
+  }
+}
+
+@media (max-width: 1024px) {
+  .feature-container2 {
+    article {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(2, auto);
+      a{
+        align-self: start !important;
+      }
+      & > div:first-child{
+        grid-row: 2;
+      }
+      & > div:nth-child(2){
+        grid-row: 1;
+        max-width: 100%;
+        text-align: left;
+      }
+    }
   }
 }

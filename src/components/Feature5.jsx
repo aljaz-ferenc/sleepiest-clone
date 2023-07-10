@@ -15,7 +15,6 @@ export default function Feature5() {
   const variants1 = {
     initial: {
       opacity: 0,
-      // x: -100,
       y: y1,
       scale: .8,
       rotate: '0deg',
@@ -27,7 +26,6 @@ export default function Feature5() {
       scale: 1,
       rotate: '5deg',
       transformOrigin: 'center',
-      // x: -100,
       display: 'inline',
       transition: {
         delay: 0

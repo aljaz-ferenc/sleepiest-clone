@@ -44,3 +44,29 @@
         }
     }
 }
+
+
+@media (max-width: 1024px) {
+    .feature-container5 {
+      article {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, auto);
+        text-align: left;
+        a{
+          align-self: start !important;
+        }
+        & > div:nth-child(2){
+          grid-row: 2;
+          height: 30rem;
+        }
+        & > div:nth-child(1){
+          img{
+            transform: translate(-50%, -70%);
+          }
+          grid-row: 1;
+          max-width: 100%;
+        }
+      }
+    }
+  }

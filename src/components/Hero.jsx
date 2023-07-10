@@ -2,7 +2,7 @@ import "./Hero.scss";
 import phoneImg from "../assets/phone.webp";
 import backgroundImg from "../assets/background.webp";
 import { motion, useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import getVariants from "../animations";
 
 export default function Hero() {

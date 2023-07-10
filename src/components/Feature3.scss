@@ -28,3 +28,24 @@
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .feature-container3 {
+    article {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(2, auto);
+      a{
+        align-self: start !important;
+      }
+      & > div:nth-child(2){
+        grid-row: 2 !important;
+      }
+      & > div:nth-child(1){
+        grid-row: 1 !important;
+        max-width: 100%;
+        text-align: left;
+      }
+    }
+  }
+}

@@ -8,13 +8,10 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-    transform: translateX(-30);
   &__top,
   &__bottom {
     display: flex;
-    transform: translate(-32px, 0px);
     gap: 1rem;
-
     img {
       width: 10rem;
       aspect-ratio: 1;
